@@ -59,7 +59,6 @@ import { handleImageUpload, MAX_FILE_SIZE } from "@/lib/tiptap-utils"
 import { TIPTAP_AI_APP_ID } from "@/lib/tiptap-collab-utils"
 
 // --- Styles ---
-import "@/styles/_variables.scss"
 import "@/components/tiptap-templates/notion-like/notion-like-editor.scss"
 
 // --- Content ---
