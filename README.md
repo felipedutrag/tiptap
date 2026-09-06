@@ -1,4 +1,4 @@
-﻿# ✍️ TipTap Studio — Real-Time Collaborative Notion-Style Document Workspace & AI Legal Engine
+# ✍️ TipTap Studio — Real-Time Collaborative Notion-Style Document Workspace & AI Legal Engine
 
 <p align=center>
   <img src=https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white alt=Next.js 15 />
@@ -24,7 +24,7 @@ The architecture pairs conflict-free replicated data types (**Yjs CRDT**) with *
 
 ## 🏗️ System Architecture
 
-`mermaid
+```mermaid
 flowchart TD
     UserA([Editor A]) <-->|Local Input / Keyboard / Pointer| ProseMirrorA[ProseMirror State & TipTap v3]
     UserB([Editor B]) <-->|Local Input / Keyboard / Pointer| ProseMirrorB[ProseMirror State & TipTap v3]
@@ -47,7 +47,7 @@ flowchart TD
         GroqClient -->|Llama-3.3-70b Ultra Low Latency Stream| AIStream[Token Delta Streamer]
         AIStream -->|Incremental ProseMirror Insert| ProseMirrorA
     end
-`
+```
 
 ---
 
@@ -77,7 +77,7 @@ flowchart TD
 
 ## 📂 Project Structure
 
-`
+```
 tiptap/
 ├── app/                        # Next.js App Router root layout & page
 ├── components/
@@ -102,7 +102,7 @@ tiptap/
 │   └── tiptap-collab-utils.ts  # Yjs document provider bindings
 ├── package.json
 └── tsconfig.json
-`
+```
 
 ---
 
@@ -116,16 +116,16 @@ tiptap/
 
 ### 1. Clone the Repository
 
-`ash
+```bash
 git clone https://github.com/felipedutrag/tiptap.git
 cd tiptap
-`
+```
 
 ### 2. Configure Environment Variables
 
 Create a .env.local file:
 
-`env
+```env
 # AI Service
 NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key
 
@@ -135,11 +135,11 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 # Collaborative Websocket Server (Optional / Hocuspocus)
 NEXT_PUBLIC_HOCUSPOCUS_URL=ws://localhost:1234
-`
+```
 
 ### 3. Install & Start Development Server
 
-`ash
+```bash
 # Install dependencies
 npm install
 
@@ -147,7 +147,7 @@ npm install
 npm run dev
 
 # Open in browser: http://localhost:3000
-`
+```
 
 ---
 
