@@ -1,111 +1,65 @@
-# ✍️ Numbly (Tiptap AI) — Editor Colaborativo Estilo Notion & Gerador de Contratos com IA
+# ✍️ Numbly (TipTap AI) — Notion-Style Collaborative Editor & Contract Generation Engine
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js 15" />
   <img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
-  <img src="https://img.shields.io/badge/Tiptap_v3-000000?style=for-the-badge&logo=tiptap&logoColor=white" alt="Tiptap v3" />
-  <img src="https://img.shields.io/badge/Yjs_CRDT_Collaboration-845EEE?style=for-the-badge&logo=yjs&logoColor=white" alt="Yjs Colaboração" />
+  <img src="https://img.shields.io/badge/TipTap_v3-000000?style=for-the-badge&logo=tiptap&logoColor=white" alt="TipTap v3" />
+  <img src="https://img.shields.io/badge/Yjs_CRDT-845EEE?style=for-the-badge&logo=yjs&logoColor=white" alt="Yjs CRDT" />
   <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase Auth & DB" />
-  <img src="https://img.shields.io/badge/Groq_Llama_3.3-F55036?style=for-the-badge&logo=groq&logoColor=white" alt="Groq IA" />
+  <img src="https://img.shields.io/badge/Groq_Llama_3.3-F55036?style=for-the-badge&logo=groq&logoColor=white" alt="Groq AI" />
 </p>
 
 ---
 
-## 📌 Visão Geral
+## 📌 Overview
 
-O **Numbly (Tiptap AI)** é um editor de documentos rico, colaborativo e inteligente inspirado na experiência do **Notion**, focado especialmente na elaboração, revisão e geração automatizada de contratos e peças jurídicas complexas com Inteligência Artificial.
+**Numbly (TipTap AI)** is a collaborative, block-based rich text editor inspired by **Notion**, engineered for contract drafting, legal revisions, and multi-user document synthesis.
 
-A plataforma combina a flexibilidade da suite **Tiptap v3** (com slash commands, drag-and-drop handles, tabelas, fórmulas matemáticas e menções), sincronização em tempo real multiusuário via **Yjs / Hocuspocus CRDT**, persistência local offline com **Dexie.js (IndexedDB)** e backend seguro com **Supabase**.
-
----
-
-## ✨ Funcionalidades Principais
-
-- 🤖 **Geração Inteligente de Contratos com IA (Groq):**
-  - Descreva a finalidade do contrato, as partes envolvidas e o tipo de avença; a IA redige cláusulas formais, qualificações e condições em segundos.
-- ⚡ **Editor Block-Based Estilo Notion (Tiptap v3):**
-  - Menu de comandos rápidos (`/` slash commands) para inserção de cabeçalhos, listas, blocos de código, callouts, divisores e imagens.
-  - Alça lateral de arrastar e soltar (`drag-handle`) para reordenar parágrafos e seções instantaneamente.
-  - Suporte a fórmulas matemáticas, realce de sintaxe, comentários e histórico de alterações.
-- 👥 **Colaboração em Tempo Real (CRDT):**
-  - Provedor Hocuspocus / Yjs com cursores dinâmicos coloridos, seleção de texto colaborativa e resolução automática de conflitos sem perdas.
-- 🔐 **Autenticação & Workspace Supabase:**
-  - Login social e por e-mail via Supabase Auth com permissões por documento e workspace.
-- 💾 **Persistência Híbrida & Suporte Offline:**
-  - Cache local reativo via **Dexie.js (IndexedDB)** garantindo fluidez instantânea e salvamento mesmo sem conexão com a internet.
+Featuring **TipTap v3**, real-time conflict-free collaboration via **Yjs / Hocuspocus CRDTs**, offline-first caching with **Dexie.js (IndexedDB)**, and instantaneous AI contract generation via **Groq (Llama 3.3)**, it provides an agile workspace for teams.
 
 ---
 
-## 🛠️ Stack Tecnológica
+## ✨ Key Features
 
-| Camada | Tecnologia |
+- 🤖 **AI Contract Drafting:** Generates rigorous statutory clauses, covenants, and signature blocks from brief natural language descriptions.
+- ⚡ **Notion-Style Block UX:** Slash commands (`/`), drag-and-drop row handles, math expressions, inline callouts, and code blocks.
+- 👥 **Real-Time Collaboration:** Multi-cursor awareness, colored presence tags, and seamless collaborative editing powered by Yjs.
+- 💾 **Offline-First Persistence:** Instant local saving via IndexedDB with automatic background sync to Supabase.
+- 🔐 **Supabase Authentication:** Secure workspace isolation, user roles, and team document collections.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
 |---|---|
-| **Framework Web** | [Next.js 15](https://nextjs.org/) (App Router, Turbopack) |
-| **Biblioteca de UI** | [React 19](https://react.dev/) + [Tailwind CSS](https://tailwindcss.com/) |
-| **Rich Text Editor** | [Tiptap v3 Suite](https://tiptap.dev/) + ProseMirror |
-| **Colaboração Realtime** | [Yjs](https://yjs.dev/) + `@hocuspocus/provider` |
-| **Inteligência Artificial** | [Groq SDK](https://groq.com/) (Llama-3.3-70b-versatile) |
-| **Banco de Dados & Auth** | [Supabase](https://supabase.com/) |
-| **Cache Local / Offline** | [Dexie.js](https://dexie.org/) (IndexedDB) |
-| **Componentes de UI** | [Radix UI](https://www.radix-ui.com/) + [Lucide React](https://lucide.dev/) + [CMDK](https://cmdk.paco.me/) |
+| **Framework** | Next.js 15 (App Router, Turbopack) |
+| **UI & Styling** | React 19, Tailwind CSS, Radix UI, CMDK |
+| **Rich Text Engine** | TipTap v3 Suite, ProseMirror |
+| **Realtime Sync** | Yjs, `@hocuspocus/provider` |
+| **Artificial Intelligence** | Groq SDK (Llama 3.3 70B) |
+| **Database & Auth** | Supabase, Dexie.js (IndexedDB) |
 
 ---
 
-## 📁 Estrutura do Repositório
+## 🚀 Getting Started
 
 ```bash
-tiptap/
-├── app/
-│   ├── notion-like/            # Rota com interface pura focada em bloco Notion
-│   ├── globals.css             # Estilização global do editor e menus flutuantes
-│   ├── layout.tsx              # Provedores de Auth, Tema e Notificações
-│   └── page.tsx                # Rota principal com Landing Page e Workspace
-├── components/                 # Componentes modulares
-│   ├── landing-page.tsx        # Hero de apresentação com gerador rápido de contratos
-│   ├── workspace-layout.tsx    # Shell com barra lateral de documentos e editor central
-│   ├── editor/                 # Componentes internos do Tiptap (BubbleMenu, SlashMenu, etc.)
-│   └── ui/                     # Primitivos de UI (Botões, Modais, Dropdowns)
-├── contexts/                   # Context API para Sessão (Auth) e Estado do Editor
-├── hooks/                      # Hooks customizados de colaboração e atalhos
-├── lib/                        # Configurações do Supabase, Groq e Yjs
-└── package.json
-```
-
----
-
-## 🚀 Como Executar Localmente
-
-### Pré-requisitos
-- Node.js `>= 18.0.0`
-- Projeto no Supabase e Chave de API da Groq
-
-### Passo a Passo
-
-```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/felipedutrag/tiptap.git
-
-# Acesse a pasta
 cd tiptap
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Configure as variáveis de ambiente (.env.local)
-# NEXT_PUBLIC_SUPABASE_URL=sua_url_supabase
-# NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_anon_key
-# GROQ_API_KEY=sua_chave_groq
-
-# Inicie o servidor em modo de desenvolvimento com Turbopack
+# Run local development server
 npm run dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador para experimentar o editor e o gerador de contratos com IA.
-
 ---
 
-## 👤 Autor
+## 👤 Author
 
-Desenvolvido por **Felipe Dutra**  
+Developed by **Felipe Dutra**  
 - **GitHub:** [@felipedutrag](https://github.com/felipedutrag)  
-- **E-mail:** [felipedutra@outlook.com](mailto:felipedutra@outlook.com)
+- **Email:** [felipedutra@outlook.com](mailto:felipedutra@outlook.com)
