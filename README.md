@@ -37,8 +37,8 @@ flowchart TD
     end
 
     subgraph Offline-First & Cloud Persistence
-        YjsA -->|Snapshot Cache| DexieDB[(Dexie.js: IndexedDB Local)]
-        Hocuspocus -->|Debounced Sync| SupabaseDB[(Supabase PostgreSQL)]
+        YjsA -->|Snapshot Cache| DexieDB[("Dexie.js: IndexedDB Local")]
+        Hocuspocus -->|Debounced Sync| SupabaseDB[("Supabase PostgreSQL")]
         UserA -->|Session Tokens| SupabaseAuth[Supabase Auth Guard]
     end
 
